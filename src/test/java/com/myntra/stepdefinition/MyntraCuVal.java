@@ -19,9 +19,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class MyntraCuVal{
 	public static  WebDriver webdriver;
+	public static Actions action;
 	WebDriverWait wait;
 	@When("Select the men option")
 	public void select_the_men_option() {
+	   wait=new WebDriverWait(webdriver,Duration.ofSeconds(10));
 	   WebElement men=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder=\"Search for products, brands and more\"]//preceding::div//a[text()='Men']")));
 	   Actions action =new Actions(webdriver);
 	   action.moveToElement(men).build().perform();

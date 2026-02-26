@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.myntra.runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.907 s - in com.myntra.runner.TestRunner
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.445 s <<< FAILURE! - in com.myntra.runner.TestRunner
+initializationError(com.myntra.runner.TestRunner)  Time elapsed: 0.014 s  <<< ERROR!
+java.lang.IllegalArgumentException: path must exist: D:\Workspace\Myntra1\src\test\resources\Features
+
