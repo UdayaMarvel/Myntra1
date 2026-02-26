@@ -30,7 +30,6 @@ public class Filters extends BaseClass{
 	
 	@Given("Launch the Myntra Application {string}")
 	public void launch_the_myntra_application(String string) {
-//		base.browserLaunch();
 		driver = base.driver;
 		action = base.action;
 	
@@ -91,7 +90,6 @@ public class Filters extends BaseClass{
 	    int count = 0;
 	    count = locators.getProds().size();
 	   	JavascriptExecutor js = (JavascriptExecutor)driver;
-//	    js.executeScript("arguments[0].scrollIntoView(false)", countOfPage);
 	    action.moveToElement(locators.getCountOfPage()).build().perform();
 	    String text = locators.getCountOfPage().getText();
 	    String[] split = text.split(" ");
@@ -99,14 +97,12 @@ public class Filters extends BaseClass{
 	    for(int i= 1; i<= pageCount;i++) {
 	 
 		    if(locators.getNextButton().isDisplayed()&&locators.getNextButton().isEnabled()) {
-//		    	js.executeScript("arguments[0].scrollIntoView(true)", next);
 		    	action.moveToElement(locators.getNextButton()).build().perform();
 		    	action.click(locators.getNextButton()).perform();
 		    }
 		    try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    
