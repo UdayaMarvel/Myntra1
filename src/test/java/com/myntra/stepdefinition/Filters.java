@@ -32,7 +32,6 @@ public class Filters extends BaseClass{
 	public void launch_the_myntra_application(String string) {
 		driver = base.driver;
 		action = base.action;
-	
 		base.applicationLaunch(string);
 	}
 	@When("User mouse over to Men")
