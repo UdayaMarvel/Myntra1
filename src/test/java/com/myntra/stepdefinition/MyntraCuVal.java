@@ -11,15 +11,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class MyntraCuVal{
 	public static  WebDriver webdriver;
+	WebDriverWait wait;
 	@When("Select the men option")
 	public void select_the_men_option() {
-	   WebElement men=	webdriver.findElement(By.xpath("//input[@placeholder=\"Search for products, brands and more\"]//preceding::div//a[text()='Men']"));
+	   WebElement men=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder=\"Search for products, brands and more\"]//preceding::div//a[text()='Men']")));
 	   Actions action =new Actions(webdriver);
 	   action.moveToElement(men).build().perform();
 	   	}
