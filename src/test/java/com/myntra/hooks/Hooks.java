@@ -14,7 +14,6 @@ public class Hooks {
 	
 	@Before
 	public void initialisation(Scenario scenario) {
-		base.browserLaunch(); //launching the browser with object
 		final byte[] start = ((TakesScreenshot)base.driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(start, "image/png", "BrowserStart");
 	}
@@ -24,7 +23,6 @@ public class Hooks {
 	public void closeInstance(Scenario scenario) {
 		final byte[] start = ((TakesScreenshot)base.driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(start, "image/png", "BrowserStart");
-		base.browserClose(); //closing the browser with object
 	}
 
 }
