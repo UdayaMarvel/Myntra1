@@ -32,7 +32,7 @@ public class MyntraCuVal extends BaseClass  {
 	
 	@When("select clicks on T-shirts:")
 	public void select_clicks_on_t_shirts() {
-		webdriver = Filters.driver;
+		webdriver = driver;
 		 Actions action =new Actions(webdriver);
 		WebElement tshirt=webdriver.findElement(By.xpath("//input[@placeholder=\"Search for products, brands and more\"]//preceding::div//a[text()='Men']//following::a[2]"));
 	    String gotval=tshirt.getAttribute("value");
