@@ -20,7 +20,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class MyntraCuVal extends BaseClass  {
 
-	BaseClass base = new BaseClass();
+	//BaseClass base = new BaseClass();
 	public static  WebDriver webdriver;
 	public static Actions action;
 	

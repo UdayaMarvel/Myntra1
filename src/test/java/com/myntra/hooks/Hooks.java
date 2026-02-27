@@ -9,13 +9,13 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-public class Hooks {
-	BaseClass base = new BaseClass();
+public class Hooks extends BaseClass {
+	//BaseClass base = new BaseClass();
 	
 	@Before
 	public void initialisation(Scenario scenario) {
-		base.browserLaunch();
-		final byte[] start = ((TakesScreenshot)base.driver).getScreenshotAs(OutputType.BYTES);
+		browserLaunch();
+		final byte[] start = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(start, "image/png", "BrowserStart");
 	
 	}
@@ -23,9 +23,9 @@ public class Hooks {
 	
 	@After
 	public void closeInstance(Scenario scenario) {
-		final byte[] start = ((TakesScreenshot)base.driver).getScreenshotAs(OutputType.BYTES);
+		final byte[] start = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(start, "image/png", "BrowserStart");
-		base.browserClose();
+		browserClose();
 	}
 
 }
