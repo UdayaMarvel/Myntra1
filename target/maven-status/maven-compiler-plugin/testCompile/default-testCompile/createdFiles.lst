@@ -1,7 +1,0 @@
-com\myntra\hooks\Hooks.class
-com\myntra\stepdefinition\MyntraCuVal.class
-com\myntra\objectRepository\FiltersLocators.class
-com\myntra\base\IBaseClass.class
-com\myntra\runner\TestRunner.class
-com\myntra\stepdefinition\Filters.class
-com\myntra\base\BaseClass.class
