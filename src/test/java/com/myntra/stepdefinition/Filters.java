@@ -23,16 +23,16 @@ import io.cucumber.java.en.When;
 
 public class Filters extends BaseClass{
 
-	BaseClass base = new BaseClass();
+	//BaseClass base = new BaseClass();
 	FiltersLocators locators = new FiltersLocators();
 	public static WebDriver driver;
 	public static Actions action;
 	
 	@Given("Launch the Myntra Application {string}")
 	public void launch_the_myntra_application(String string) {
-		driver = base.driver;
-		action = base.action;
-		base.applicationLaunch(string);
+		driver = driver;
+		action = action;
+		applicationLaunch(string);
 	}
 	@When("User mouse over to Men")
 	public void user_mouse_over_to_men() {

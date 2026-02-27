@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 					monochrome = true,
 					dryRun = false,
 					plugin = {"html:target\\index.html","json:target\\report.json"},
-					tags = "@Scenario1")
+					tags = "@Lounge")
 public class TestRunner {
 
 }
