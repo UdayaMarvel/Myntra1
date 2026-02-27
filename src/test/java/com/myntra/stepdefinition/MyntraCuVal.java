@@ -11,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.myntra.base.BaseClass;
 import com.myntra.objectRepository.FiltersLocators;
@@ -23,6 +25,7 @@ public class MyntraCuVal extends BaseClass  {
 	BaseClass base = new BaseClass();
 	public static  WebDriver webdriver;
 	public static Actions action;
+	WebDriverWait wait;
 	
 	@When("Select the men option")
 	public void select_the_men_option() {
@@ -33,8 +36,9 @@ public class MyntraCuVal extends BaseClass  {
 	@When("select clicks on T-shirts:")
 	public void select_clicks_on_t_shirts() {
 		webdriver = Filters.driver;
-		 Actions action =new Actions(webdriver);
-		WebElement tshirt=webdriver.findElement(By.xpath("//input[@placeholder=\"Search for products, brands and more\"]//preceding::div//a[text()='Men']//following::a[2]"));
+		Actions action =new Actions(webdriver);
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement tshirt=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder=\\\"Search for products, brands and more\\\"]//preceding::div//a[text()='Men']//following::a[2]")));
 	    String gotval=tshirt.getAttribute("value");
 	    System.out.println(gotval);
 		action.moveToElement(tshirt).click().build().perform();	
