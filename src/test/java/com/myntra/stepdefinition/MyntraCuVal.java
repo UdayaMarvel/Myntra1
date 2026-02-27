@@ -29,7 +29,7 @@ public class MyntraCuVal extends BaseClass  {
 	
 	@When("Select the men option")
 	public void select_the_men_option() {
-	   WebElement men=	webdriver.findElement(By.xpath("//input[@placeholder=\"Search for products, brands and more\"]//preceding::div//a[text()='Men']"));
+	   WebElement men=	webdriver.findElement(By.xpath("a[text()='Men']"));
 	   action.moveToElement(men).build().perform();
 	   	}
 	
