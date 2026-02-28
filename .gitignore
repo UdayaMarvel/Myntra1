@@ -1,4 +1,7 @@
 /target/
+<<<<<<< HEAD
+=======
 .xml
 /xml/
 pom.xml
+>>>>>>> da8009109313d1c3991c2f30afe1a2b29da5662f
