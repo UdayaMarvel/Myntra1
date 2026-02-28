@@ -22,10 +22,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class MyntraCuVal extends BaseClass  {
 
-	BaseClass base = new BaseClass();
+	//BaseClass base = new BaseClass();
 	public static  WebDriver webdriver;
 	public static Actions action;
-	WebDriverWait wait;
+	//WebDriverWait wait;
 	
 	@When("Select the men option")
 	public void select_the_men_option() {
@@ -37,8 +37,8 @@ public class MyntraCuVal extends BaseClass  {
 	public void select_clicks_on_t_shirts() {
 		webdriver = Filters.driver;
 		Actions action =new Actions(webdriver);
-		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		WebElement tshirt=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder=\\\"Search for products, brands and more\\\"]//preceding::div//a[text()='Men']//following::a[2]")));
+		//wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement tshirt=webdriver.findElement(By.xpath("//input[@placeholder=\\\"Search for products, brands and more\\\"]//preceding::div//a[text()='Men']//following::a[2]"));
 	    String gotval=tshirt.getAttribute("value");
 	    System.out.println(gotval);
 		action.moveToElement(tshirt).click().build().perform();	
