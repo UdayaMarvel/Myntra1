@@ -14,19 +14,17 @@ public class Hooks extends BaseClass{
 	
 	@Before
 	public void initialisation(Scenario scenario) {
-		browserLaunch(); 
-		System.out.println("browser launched");
+		browserLaunch(); //launching the browser with object creation
 		final byte[] start = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-		scenario.attach(start, "image/png", "BrowserStart");
+		scenario.attach(start, "image/png", "BrowserStarts");
 	}
 	
 	
 	@After
 	public void closeInstance(Scenario scenario) {
 		final byte[] start = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-		scenario.attach(start, "image/png", "BrowserStart");
-		browserClose();
-		System.out.println("browser closed");
+		scenario.attach(start, "image/png", "BrowserEnd");
+		browserClose(); //closing the browser with object creation
 	}
 
 }
