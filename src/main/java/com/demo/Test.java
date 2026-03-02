@@ -6,5 +6,5 @@ public class Test {
 		
 		System.out.println("Test");
 	}
-//System.out.println("adding newly");
+//System.out.println("adding new");
 }
