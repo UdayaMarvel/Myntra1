@@ -64,7 +64,7 @@ public class Filters extends BaseClass{
 	 WebElement lounge = driver.findElement(By.xpath("//div[text()='"+tshirt+"']"));
 	   String text = lounge.getText();
 	   if(text.contains(tshirt)) {
-		   System.out.println("Filtered with Lounge T Shirts Category");
+		   System.out.println("Lounge T Shirts Category");
 	   }
 	}
 	
