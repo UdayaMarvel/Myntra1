@@ -11,7 +11,7 @@ import io.cucumber.java.Scenario;
 
 public class Hooks extends BaseClass {
 	 BaseClass base = new BaseClass();
-	String value="Subathra";
+	
 	
 	@Before
 	public void initialisation(Scenario scenario) {
