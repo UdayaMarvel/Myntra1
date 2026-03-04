@@ -10,7 +10,8 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class Hooks extends BaseClass{
-	// BaseClass base = new BaseClass();
+	 BaseClass base = new BaseClass();
+	String value="Master";
 	
 	@Before
 	public void initialisation(Scenario scenario) {
