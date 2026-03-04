@@ -88,7 +88,6 @@ public class Filters extends BaseClass{
 	public void verify_the_count_matches_the_products() {
 	    int count = 0;
 	    count = locators.getProds().size();
-	   	JavascriptExecutor js = (JavascriptExecutor)driver;
 	    action.moveToElement(locators.getCountOfPage()).build().perform();
 	    String text = locators.getCountOfPage().getText();
 	    String[] split = text.split(" ");
